@@ -1,10 +1,10 @@
-chat_id="KicKGFVDUvTm5ObU5JX0x3RWRVDc0QRILTWM4Nkw1ZmNSa3M"
-API_key="AIzaSyBoNGA__U6xy-aBE6m19pgq8TY-TM"
-client_id="2151212981-79tham74g7jtdkvucvpqiu12uiv8.apps.googleusercontent.com"
-client_secret="GOCPX-5X-bq9u9hVc54YEsa0c2HAc"
+chat_id=""
+API_key=""
+client_id=""
+client_secret=""
 redirect_uri="http://127.0.0.1:8080"
 last_message_id_from_0=0
-access_token="ya9.a0d52N3-FksB-FEtAqR-ao9_zAFqS4tnINWSzF4MiM39qkgjAGKXTwpKAx_Vq_HqIlhqYKtoXO-s3Fll_NwvKlhQD0vg0bGilGF-2NyJ-Gicbr1KOtHN4ixsQBwMnBeFwpFeyiDAhSncVAdvZJ5ebe5ZbPrDsaCgYKASARMSFQHGX2Mib6C0EVBLppnpPAJ2r77EQ0174"
+access_token=""
 
 
 curl -s "https://content-youtube.googleapis.com/youtube/v3/liveChat/messages?liveChatId=$chat_id&part=snippet&key=$API_key" --compressed -H "Authorization: Bearer $access_token" -H 'X-Origin: https://explorer.apis.google.com' > json.txt

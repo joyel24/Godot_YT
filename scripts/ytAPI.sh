@@ -1,6 +1,6 @@
-API_key="AIzaSyBo4NGA__U6Xxy-aBE6ym1pgq8TY-TM"
-client_id="21512919871-79thams74g7jtbdkvucvqiuq126uiv8.apps.googleusercontent.com"
-client_secret="GOCSPX-5X-bq9u9hxVc34YEsS0Oac2HAc"
+API_key=""
+client_id=""
+client_secret=""
 redirect_uri="http://127.0.0.1:8080"
 
 
@@ -16,7 +16,7 @@ then
 	#echo access_token $access_token
 fi
 
-access_token="ya29.a0Ad52N38bASUfWYVDhcAZQ6ZWbpszLmgEfwq4XlfdkN85QYiq5gsI0jS5qShrjdSUlZyJOqfh0k9w57yKSb74C5u9_ZKOm4lXUAAsYdPkrpQBr52DUrg_MYWRKrCRpKNb-k7BMBhKJFc5QhHRXXtee-tw8xkaCgYKAwSARMSFQGX2MiZXmH6qABZ3Fb4Fz9XZxw0174"
+access_token=""
 echo $access_token > access_token.txt
 #cat access_token.txt #echo access_token $access_token
 
@@ -27,12 +27,12 @@ access_token=$(cat access_token.txt)
 #echo $chat_id > chat_id.txt
 #chat_id=$(cat chat_id.txt | jq -r '.items[0].snippet.liveChatId')
 
-chat_id="KicKGFVDUjBvTm5ObU50xN3ROO5RV0QRILRUlkeDlHWHBUM2s"
+chat_id=""
 #echo chat_id $chat_id
 
 while true; do 
 	
-	#curl -s 'https://youtube.googleapis.com/youtube/v3/liveChat/messages?liveChatId=KicKGFVDUjBvTm5ObU5JX0x6N3ROW5RVDc0QRIQktrSnk0ckVHUkU&part=snippet&key=AIzaSyAccYBqZ7KVjssFouTcRxaBGjk5tdwPI' --header "Authorization: Bearer $access_token" --header 'Accept: application/json' --compressed > json.txt
+	#curl -s 'https://youtube.googleapis.com/youtube/v3/liveChat/messages?liveChatId=KSnk0ckVHUkU&part=snippet&key=AIzaSyAcctdwPI' --header "Authorization: Bearer $access_token" --header 'Accept: application/json' --compressed > json.txt
 	#curl -s "https://youtube.googleapis.com/youtube/v3/liveChat/messages?liveChatId=$chat_id&part=snippet&key=$API_key" --header "Authorization: Bearer $access_token" --header 'Accept: application/json' --compressed -H 'X-Origin: https://explorer.apis.google.com' -H 'Connection: keep-alive' > json.txt
 	curl -s "https://content-youtube.googleapis.com/youtube/v3/liveChat/messages?liveChatId=$chat_id&part=snippet&key=$API_key" --compressed -H "Authorization: Bearer $access_token" -H 'X-Origin: https://explorer.apis.google.com' > json.txt
 	
