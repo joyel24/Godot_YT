@@ -325,6 +325,9 @@ position = Vector2( 584, 152 )
 position = Vector2( 505, 297 )
 destination = NodePath("../TeleporterArea2")
 
+[node name="DialogArea" parent="TeleporterArea" instance=ExtResource( 16 )]
+position = Vector2( 139, -1 )
+
 [node name="TeleporterArea2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 664, 296 )
 destination = NodePath("../TeleporterArea")
