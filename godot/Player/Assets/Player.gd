@@ -28,7 +28,7 @@ var gravity_normal = DEFAULT_GRAVITY
 var gravity_zchanged = false
 var wind_influence = {}
 
-var movement_dir = 0
+#var movement_dir = 0
 var climb_dir = 0
 var inv_mov = 1
 var velocity = Vector2()
@@ -63,7 +63,7 @@ func _physics_process(delta):
 	climb_dir = 0
 	
 	#Speed Smoothing
-	var n_speed = speed * movement_dir
+	var n_speed = speed * Global.movement_dir
 	
 	if is_on_floor():
 		if abs(n_speed) > abs(velocity.x):
@@ -168,7 +168,7 @@ func _physics_process(delta):
 	#velocity = move_and_slide_with_snap(velocity,Vector2(0,snap),Vector2.UP)
 
 func get_input(): 
-	movement_dir = Input.get_vector("left","right","null","null").x
+	Global.movement_dir = Input.get_vector("left","right","null","null").x
 	
 	if Input.is_action_just_pressed("left") || Input.is_action_just_pressed("right") :
 		# -90 bis 90 normal
@@ -177,7 +177,7 @@ func get_input():
 		else:
 			inv_mov = 1
 	
-	movement_dir *= inv_mov
+	Global.movement_dir *= inv_mov
 	
 	var try_jump = false
 	
@@ -239,16 +239,16 @@ func calculate_sprite():
 	var n_rot = rad2deg(gravity_normal.angle()) - 90
 	rotation_degrees = n_rot
 	
-	if movement_dir < 0:
+	if Global.movement_dir < 0:
 		sprite.flip_h = true
-	elif movement_dir > 0:
+	elif Global.movement_dir > 0:
 		sprite.flip_h = false
 	
 	if state == STATES.Idle:
 		sprite.animation = "idle"
 	elif state == STATES.Walk:
 		sprite.animation = "walk"
-		if movement_dir == 0:
+		if Global.movement_dir == 0:
 			sprite.speed_scale = clamp((abs(velocity.x) / speed)*4,0,1)
 	elif state == STATES.Climb:
 		sprite.animation = "climb"

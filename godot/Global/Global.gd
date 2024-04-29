@@ -5,6 +5,8 @@ signal blocks_switched
 var max_coins = 0
 var current_coins = 0
 
+var movement_dir = 0
+
 var text_box = ""
 
 var block_switch = true
