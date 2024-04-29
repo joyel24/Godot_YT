@@ -182,9 +182,6 @@ script = ExtResource( 2 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0.631373, 0.956863, 1, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Load" type="Timer" parent="."]
 one_shot = true
@@ -222,10 +219,11 @@ position = Vector2( 172, 120 )
 position = Vector2( 248, 68 )
 
 [node name="DialogArea" parent="WorldMap" instance=ExtResource( 12 )]
-position = Vector2( 200, 120 )
+position = Vector2( 215.75, 104.75 )
 text = "A game made by YOUR NAME and Finn Pickart"
 
 [node name="Sign" type="Sprite" parent="WorldMap/DialogArea"]
+position = Vector2( 0, -0.5 )
 texture = ExtResource( 11 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
