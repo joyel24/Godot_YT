@@ -1,10 +1,10 @@
-chat_id="KicKGFVDUjBvTm5ObU5JX0x6N3ROOW5RVDc0QRILTWM4Nkw1ZmNSa3M"
-API_key="AIzaSyBeo4NGA__U6Xxy-aBE6yFm19pgq8TY-TM"
-client_id="215129129871-79thams74g7jtbdkvucvpqiuq126uiv8.apps.googleusercontent.com"
-client_secret="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"
+chat_id="KicKGFVDUvTm5ObU5JX0x3RWRVDc0QRILTWM4Nkw1ZmNSa3M"
+API_key="AIzaSyBoNGA__U6xy-aBE6m19pgq8TY-TM"
+client_id="2151212981-79tham74g7jtdkvucvpqiu12uiv8.apps.googleusercontent.com"
+client_secret="GOCPX-5X-bq9u9hVc54YEsa0c2HAc"
 redirect_uri="http://127.0.0.1:8080"
 last_message_id_from_0=0
-access_token="ya29.a0Ad52N3-FksB-FEtAqR-ao9_zAF4MqS4tnINWSzFg4MiM39qkgjAGKXTwpKAx_Vq_HqxIlhqYKtoXO-s3Fll_NwhvKlhQD0Ksvg0bGilGF-2NyJ-Gicbr1KOtHN4iQxsQBwMnBeFwwpFeyiDAh9SncVAdvZJ5e8be5ZbPrDsaCgYKAcYSARMSFQHGX2Mibe6C0EVBLppnpPAJ2r77EQ0174"
+access_token="ya9.a0d52N3-FksB-FEtAqR-ao9_zAFqS4tnINWSzF4MiM39qkgjAGKXTwpKAx_Vq_HqIlhqYKtoXO-s3Fll_NwvKlhQD0vg0bGilGF-2NyJ-Gicbr1KOtHN4ixsQBwMnBeFwpFeyiDAhSncVAdvZJ5ebe5ZbPrDsaCgYKASARMSFQHGX2Mib6C0EVBLppnpPAJ2r77EQ0174"
 
 
 curl -s "https://content-youtube.googleapis.com/youtube/v3/liveChat/messages?liveChatId=$chat_id&part=snippet&key=$API_key" --compressed -H "Authorization: Bearer $access_token" -H 'X-Origin: https://explorer.apis.google.com' > json.txt

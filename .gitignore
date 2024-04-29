@@ -1,3 +1,12 @@
 *.DS_Store
 scripts/RUST_YT/.git.bak/
 scripts/http/.git.bak
+scripts/json.txt
+scripts/code.txt
+scripts/chat_id.txt
+scripts/access_token.txt
+scripts/json.txt.old
+scripts/RUST_YT/code.txt
+scripts/RUST_YT/src/code.txt
+scripts/http/json.txt
+scripts/http/src/code.txt

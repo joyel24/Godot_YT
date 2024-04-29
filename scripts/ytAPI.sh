@@ -1,6 +1,6 @@
-API_key="AIzaSyBeo4NGA__U6Xxy-aBE6yFm19pgq8TY-TM"
-client_id="215129129871-79thams74g7jtbdkvucvpqiuq126uiv8.apps.googleusercontent.com"
-client_secret="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"
+API_key="AIzaSyBo4NGA__U6Xxy-aBE6ym1pgq8TY-TM"
+client_id="21512919871-79thams74g7jtbdkvucvqiuq126uiv8.apps.googleusercontent.com"
+client_secret="GOCSPX-5X-bq9u9hxVc34YEsS0Oac2HAc"
 redirect_uri="http://127.0.0.1:8080"
 
 
@@ -11,12 +11,12 @@ then
 	code=$(cat code.txt)
 	echo code $code
 	access_token=$(curl -s -X POST https://oauth2.googleapis.com/token -d "code=$code&client_id=$client_id&client_secret=$client_secret&redirect_uri=$redirect_uri&access_type=offline&grant_type=authorization_code" -H 'X-Origin: https://explorer.apis.google.com' -H 'Connection: keep-alive' | jq -r .access_token)
-	#access_token="ya29.a0Ad52N3-vA4rB2BOF8BplwHqNmnm67G8I23HnZgQ6TWY03rGnxxVWzoGtj08s0HBGhHVsgbafnPx1L5tVzEyuSu3ybvI-vR_cuE_QTQYeKFA1fAE-9WG3m7tvdaLaJ4diK6g_rhN0J3YX1QtVfjOV01eASMvr-9jUarFmbw4aCgYKAXkSARMSFQHGX2MiC0q6WNV8OmKjp7s1aEw8bg0174"
+	#access_token="ya29.a0Ad52N3-vA4rB2BOF8BplwHqNmnm67G8I23HnZQ6TWY03rGnxxVWzoGtj08s0HBGhHVsgbafnPx1L5tVzEySu3ybvI-vR_cuE_QTQYeKFA1fAE-9WG3m7tvdaLaJ4diK6g_rhN0J3YX1QtVfjOV01eASMvr-9jUarFmbw4aCgYKAXkSARMSFQHGX2MiC0q6WNV8OmKjp7s1aEw8bg0174"
 	echo $access_token > access_token.txt
 	#echo access_token $access_token
 fi
 
-access_token="ya29.a0Ad52N38bASUfWYVD1UhcAZQ6ZWbpsMzLmgEfwq4Xlfdk4N85cQYiq5gsI0jS5PqShrjdSUlZyJOqfh0k9w57yKSb74C5u9_ZKOm4lXUAAFsYdPkrGpQBr52DUrg_MYWRKrCRpKNb-k7BMBhKJFPLJc5QhHRCXXtee-tw8xkaCgYKASwSARMSFQHGX2MiZFRXmH6qABZ3Fb4Fz9XZxw0174"
+access_token="ya29.a0Ad52N38bASUfWYVDhcAZQ6ZWbpszLmgEfwq4XlfdkN85QYiq5gsI0jS5qShrjdSUlZyJOqfh0k9w57yKSb74C5u9_ZKOm4lXUAAsYdPkrpQBr52DUrg_MYWRKrCRpKNb-k7BMBhKJFc5QhHRXXtee-tw8xkaCgYKAwSARMSFQGX2MiZXmH6qABZ3Fb4Fz9XZxw0174"
 echo $access_token > access_token.txt
 #cat access_token.txt #echo access_token $access_token
 
@@ -27,12 +27,12 @@ access_token=$(cat access_token.txt)
 #echo $chat_id > chat_id.txt
 #chat_id=$(cat chat_id.txt | jq -r '.items[0].snippet.liveChatId')
 
-chat_id="KicKGFVDUjBvTm5ObU5JX0x6N3ROOW5RVDc0QRILRUlkeDlHWHBUM2s"
+chat_id="KicKGFVDUjBvTm5ObU50xN3ROO5RV0QRILRUlkeDlHWHBUM2s"
 #echo chat_id $chat_id
 
 while true; do 
 	
-	#curl -s 'https://youtube.googleapis.com/youtube/v3/liveChat/messages?liveChatId=KicKGFVDUjBvTm5ObU5JX0x6N3ROOW5RVDc0QRILQktrSnk0ckVHUkU&part=snippet&key=AIzaSyAccYmBqZ7KVjssFouTcRwxaBGjk5tdwPI' --header "Authorization: Bearer $access_token" --header 'Accept: application/json' --compressed > json.txt
+	#curl -s 'https://youtube.googleapis.com/youtube/v3/liveChat/messages?liveChatId=KicKGFVDUjBvTm5ObU5JX0x6N3ROW5RVDc0QRIQktrSnk0ckVHUkU&part=snippet&key=AIzaSyAccYBqZ7KVjssFouTcRxaBGjk5tdwPI' --header "Authorization: Bearer $access_token" --header 'Accept: application/json' --compressed > json.txt
 	#curl -s "https://youtube.googleapis.com/youtube/v3/liveChat/messages?liveChatId=$chat_id&part=snippet&key=$API_key" --header "Authorization: Bearer $access_token" --header 'Accept: application/json' --compressed -H 'X-Origin: https://explorer.apis.google.com' -H 'Connection: keep-alive' > json.txt
 	curl -s "https://content-youtube.googleapis.com/youtube/v3/liveChat/messages?liveChatId=$chat_id&part=snippet&key=$API_key" --compressed -H "Authorization: Bearer $access_token" -H 'X-Origin: https://explorer.apis.google.com' > json.txt
 	

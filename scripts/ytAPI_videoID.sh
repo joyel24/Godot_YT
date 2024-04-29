@@ -1,8 +1,8 @@
-API_key=AIzaSyDQKb5wxZmprQzpAPAOgx2zAE7hjI-DyHc
-client_id=377385417919-rrshc7tcsmlhbp7514p3945buglf5bqa.apps.googleusercontent.com
-client_secret=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
+API_key=AIzaSyDQKb5wxZmprQzPAOx2zAE7hjI-DyHc
+client_id=377385417919-rrshc7tcsmlhbp7513945buglf5bqa.apps.googleusercontent.com
+client_secret=GOSPX-IIgyHqJaesf0iwdeVI4w9e07lZ
 redirect_uri=http://127.0.0.1:8080
-livestread_id=EIdx9GXpT3k
+livestread_id=EIdGXpT3k
 
 if true
 then
@@ -28,9 +28,9 @@ while true
 	total_msg=$(( $(jq -r '.pageInfo.totalResults' json.txt)-1 ))
 	if [[ $last_message_id < $total_msg ]]; then
 		if [[ $last_message_id == 0 ]]; then
-			bash -c "echo -n 0:" ; channel_id=$(jq -r ".items[0].snippet.authorChannelId" json.txt) ; channel_url=$(curl -s https://www.googleapis.com/youtube/v3/channels\?id\=$channel_id\&part\=snippet\&key\=AIzaSyAccYmBqZ7KVjssFouTcRwxaBGjk5tdwPI | jq -r ".items[].snippet.customUrl" | cut -c 2- ) ; zsh -c "echo -n $channel_url:" ; jq -r ".items[0].snippet.textMessageDetails.messageText" json.txt ; last_message_id=1 #if [[ $total_msg > 0 ]]; then last_message_id=1 ;fi
+			bash -c "echo -n 0:" ; channel_id=$(jq -r ".items[0].snippet.authorChannelId" json.txt) ; channel_url=$(curl -s https://www.googleapis.com/youtube/v3/channels\?id\=$channel_id\&part\=snippet\&key\=AIzaSyccYmBqZ7KssFouTcRwxaBGk5tdwPI | jq -r ".items[].snippet.customUrl" | cut -c 2- ) ; zsh -c "echo -n $channel_url:" ; jq -r ".items[0].snippet.textMessageDetails.messageText" json.txt ; last_message_id=1 #if [[ $total_msg > 0 ]]; then last_message_id=1 ;fi
 		else
-			for ((i = last_message_id=1; i <= total_msg ; i=i+1)); do bash -c "echo -n $i:" ; channel_id=$(jq -r ".items[$i].snippet.authorChannelId" json.txt) ; channel_url=$(curl -s https://www.googleapis.com/youtube/v3/channels\?id\=$channel_id\&part\=snippet\&key\=AIzaSyAccYmBqZ7KVjssFouTcRwxaBGjk5tdwPI | jq -r ".items[].snippet.customUrl" | cut -c 2- ) ; zsh -c "echo -n $channel_url:" ; jq -r ".items[$i].snippet.textMessageDetails.messageText" json.txt; done
+			for ((i = last_message_id=1; i <= total_msg ; i=i+1)); do bash -c "echo -n $i:" ; channel_id=$(jq -r ".items[$i].snippet.authorChannelId" json.txt) ; channel_url=$(curl -s https://www.googleapis.com/youtube/v3/channels\?id\=$channel_id\&part\=snippet\&key\=AIzaSyAccYmBqZ7KjsouTcRwxaBjk5tdwPI | jq -r ".items[].snippet.customUrl" | cut -c 2- ) ; zsh -c "echo -n $channel_url:" ; jq -r ".items[$i].snippet.textMessageDetails.messageText" json.txt; done
 			last_message_id=$((total_msg))
 			sleep 5
 		fi
