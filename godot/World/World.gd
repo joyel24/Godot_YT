@@ -3,11 +3,21 @@ extends Node2D
 onready var transition = $UI/Transition
 onready var tilemap = $WorldMap
 
+var float_var
+
 func _ready():
 	Global.text_box = ""
 	calculate_switch_blocks()
 	var _error = Global.connect("blocks_switched",self,"calculate_switch_blocks")
 	transition.open()
+	
+func _physics_process(delta):
+	print(Global.on_sign_lbl)
+	if Global.on_sign_lbl == false:
+		Global.walk = 1
+	elif Global.on_sign_lbl == true:
+			Global.walk = 0
+	
 
 func _unhandled_input(_event):
 	if Input.is_action_just_pressed("pause"):

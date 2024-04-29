@@ -6,6 +6,8 @@ var max_coins = 0
 var current_coins = 0
 
 var movement_dir = 0
+var walk = 0
+var on_sign_lbl = false
 
 var text_box = ""
 
