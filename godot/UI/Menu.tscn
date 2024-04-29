@@ -227,7 +227,7 @@ position = Vector2( 0, -0.5 )
 texture = ExtResource( 11 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
-position = Vector2( 314, 463 )
+position = Vector2( 416, 475 )
 scale = Vector2( 4, 4 )
 speed = 800
 jump_height = 256.0

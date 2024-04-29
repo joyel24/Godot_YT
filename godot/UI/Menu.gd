@@ -4,6 +4,7 @@ onready var transition = $Transition
 
 func _ready():
 	transition.open(1.0,0.25)
+	get_tree().change_scene("res://World/World.tscn") #Run World...
 	
 
 func _on_Play_button_down():
