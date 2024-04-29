@@ -1,0 +1,92 @@
+{
+  "kind": "youtube#liveChatMessageListResponse",
+  "etag": "aUxeIQ-TSzZmjW3oXBXMuW59CtQ",
+  "pollingIntervalMillis": 1039,
+  "pageInfo": {
+    "totalResults": 5,
+    "resultsPerPage": 5
+  },
+  "nextPageToken": "GI_03_iZ4oUDIKWwleaT44UD",
+  "items": [
+    {
+      "kind": "youtube#liveChatMessage",
+      "etag": "4dXl5je4nxHK7qQHcNhrKjsmNlU",
+      "id": "LCC.EhwKGkNLU09zNXFaNG9VREZRRU4xZ0FkOWJNT1F3",
+      "snippet": {
+        "type": "textMessageEvent",
+        "liveChatId": "KicKGFVDUjBvTm5ObU5JX0x6N3ROOW5RVDc0QRILRUlkeDlHWHBUM2s",
+        "authorChannelId": "UCR0oNnNmNI_Lz7tN9nQT74A",
+        "publishedAt": "2024-04-27T10:35:13.442593+00:00",
+        "hasDisplayContent": true,
+        "displayMessage": "dmfl,",
+        "textMessageDetails": {
+          "messageText": "dmfl,"
+        }
+      }
+    },
+    {
+      "kind": "youtube#liveChatMessage",
+      "etag": "Lp-hSFv8AnmymYYKpEO6zPMxQxw",
+      "id": "LCC.EhwKGkNLWExpS0NaNG9VREZhd0wxZ0FkMGFRTW9n",
+      "snippet": {
+        "type": "textMessageEvent",
+        "liveChatId": "KicKGFVDUjBvTm5ObU5JX0x6N3ROOW5RVDc0QRILRUlkeDlHWHBUM2s",
+        "authorChannelId": "UCR0oNnNmNI_Lz7tN9nQT74A",
+        "publishedAt": "2024-04-27T10:35:25.334892+00:00",
+        "hasDisplayContent": true,
+        "displayMessage": "azd",
+        "textMessageDetails": {
+          "messageText": "azd"
+        }
+      }
+    },
+    {
+      "kind": "youtube#liveChatMessage",
+      "etag": "i7nTY_HMCO6ubVHn-e6g-_h9f1w",
+      "id": "LCC.EhwKGkNJN0w3YUtaNG9VREZXY24xZ0FkemFNQkJ3",
+      "snippet": {
+        "type": "textMessageEvent",
+        "liveChatId": "KicKGFVDUjBvTm5ObU5JX0x6N3ROOW5RVDc0QRILRUlkeDlHWHBUM2s",
+        "authorChannelId": "UCR0oNnNmNI_Lz7tN9nQT74A",
+        "publishedAt": "2024-04-27T10:35:31.177208+00:00",
+        "hasDisplayContent": true,
+        "displayMessage": "adazaf",
+        "textMessageDetails": {
+          "messageText": "adazaf"
+        }
+      }
+    },
+    {
+      "kind": "youtube#liveChatMessage",
+      "etag": "K7QSlEXhuMOafwaZb6d8_kQIJKE",
+      "id": "LCC.EhwKGkNLeXlwLUdaNG9VREZaWVExZ0FkaXpFS1FR",
+      "snippet": {
+        "type": "textMessageEvent",
+        "liveChatId": "KicKGFVDUjBvTm5ObU5JX0x6N3ROOW5RVDc0QRILRUlkeDlHWHBUM2s",
+        "authorChannelId": "UCR0oNnNmNI_Lz7tN9nQT74A",
+        "publishedAt": "2024-04-27T10:37:42.1488+00:00",
+        "hasDisplayContent": true,
+        "displayMessage": "ddd",
+        "textMessageDetails": {
+          "messageText": "ddd"
+        }
+      }
+    },
+    {
+      "kind": "youtube#liveChatMessage",
+      "etag": "0lA25a2js4AQLljAzV92DBQE39k",
+      "id": "LCC.EhwKGkNMaUkzX2laNG9VREZSUU4xZ0FkT0pJT0hR",
+      "snippet": {
+        "type": "textMessageEvent",
+        "liveChatId": "KicKGFVDUjBvTm5ObU5JX0x6N3ROOW5RVDc0QRILRUlkeDlHWHBUM2s",
+        "authorChannelId": "UCR0oNnNmNI_Lz7tN9nQT74A",
+        "publishedAt": "2024-04-27T10:38:31.295503+00:00",
+        "hasDisplayContent": true,
+        "displayMessage": "ddd",
+        "textMessageDetails": {
+          "messageText": "ddd"
+        }
+      }
+    }
+  ]
+}
