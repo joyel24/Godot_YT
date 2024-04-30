@@ -11,6 +11,8 @@ var on_sign_lbl = false
 
 var text_box = ""
 var vote_score = ""
+var vote_sum = 0
+var teleport = false
 
 var block_switch = true
 

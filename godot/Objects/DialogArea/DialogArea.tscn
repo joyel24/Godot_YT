@@ -12,5 +12,7 @@ text = "VOTE:"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
 [connection signal="body_entered" from="." to="." method="_on_DialogArea_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_DialogArea_body_exited"]
