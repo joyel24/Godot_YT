@@ -4,7 +4,7 @@ export(String, MULTILINE) var text = ""
 
 func _on_DialogArea_body_entered(body):
 	if body.has_method("is_player"):
-		Global.on_sign_lbl = true
+		Global.on_sign_lbl = true #Tell you're in label (to wait cf world.gd)
 		Global.text_box = text
 
 func _on_DialogArea_body_exited(body):

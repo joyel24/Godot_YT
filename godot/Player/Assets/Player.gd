@@ -169,9 +169,9 @@ func _physics_process(delta):
 	#velocity = move_and_slide_with_snap(velocity,Vector2(0,snap),Vector2.UP)
 
 func get_input(): 
-	Global.movement_dir = Input.get_vector("left","right","null","null").x
-	if Global.movement_dir == 0:
-		Global.movement_dir = Global.walk
+	Global.movement_dir = Input.get_vector("left","right","null","null").x #left or right key
+	if Global.movement_dir == 0: #if no left or right key pressed 
+		Global.movement_dir = Global.walk #then use Global.walk var cf World.gd
 		
 #	print(Global.movement_dir)
 	

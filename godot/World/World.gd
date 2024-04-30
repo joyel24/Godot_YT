@@ -13,11 +13,11 @@ func _ready():
 	
 func _physics_process(delta):
 	#print(Global.on_sign_lbl)
-	if Global.on_sign_lbl == false:
-		Global.walk = 1
-	elif Global.on_sign_lbl == true:
-			Global.walk = 0
-	
+	if Global.on_sign_lbl == false: #walk right if not on sign
+		Global.walk = 1 #cf player.gd
+	elif Global.on_sign_lbl == true: #if sign: stop walk
+		Global.walk = 0
+		
 
 func _unhandled_input(_event):
 	if Input.is_action_just_pressed("pause"):

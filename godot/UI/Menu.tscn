@@ -219,15 +219,15 @@ position = Vector2( 172, 120 )
 position = Vector2( 248, 68 )
 
 [node name="DialogArea" parent="WorldMap" instance=ExtResource( 12 )]
-position = Vector2( 215.75, 104.75 )
+position = Vector2( 80.75, 120 )
 text = "A game made by YOUR NAME and Finn Pickart"
 
 [node name="Sign" type="Sprite" parent="WorldMap/DialogArea"]
-position = Vector2( 0, -0.5 )
+position = Vector2( 14.75, 0.25 )
 texture = ExtResource( 11 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
-position = Vector2( 416, 475 )
+position = Vector2( 318, 461 )
 scale = Vector2( 4, 4 )
 speed = 800
 jump_height = 256.0
