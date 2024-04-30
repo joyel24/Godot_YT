@@ -29,7 +29,6 @@ func _on_TeleporterArea_body_entered(body):
 			inside = body
 			$JumpPrompt.visible = true
 			return
-		
 		teleport_body(body)
 
 func teleport_body(body):

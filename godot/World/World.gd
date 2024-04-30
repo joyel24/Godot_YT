@@ -12,7 +12,7 @@ func _ready():
 	transition.open()
 	
 func _physics_process(delta):
-	print(Global.on_sign_lbl)
+	#print(Global.on_sign_lbl)
 	if Global.on_sign_lbl == false:
 		Global.walk = 1
 	elif Global.on_sign_lbl == true:

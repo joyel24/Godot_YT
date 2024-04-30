@@ -54,7 +54,7 @@ var last_state = state
 func _process(_delta):
 	get_input()
 	$Label.text = STATES.keys()[state]# + " -- " + str(rotation_degrees)
-	print($Label.text)
+	#print($Label.text)
 
 func _physics_process(delta):
 	last_state = state
@@ -173,7 +173,7 @@ func get_input():
 	if Global.movement_dir == 0:
 		Global.movement_dir = Global.walk
 		
-	print(Global.movement_dir)
+#	print(Global.movement_dir)
 	
 	if Input.is_action_just_pressed("left") || Input.is_action_just_pressed("right") :
 		# -90 bis 90 normal
