@@ -54,7 +54,6 @@ pub fn main() {
 
 pub fn handle_connection(mut stream: TcpStream, mut var1: i32, mut var2: i32, mut started: i32) -> i32 { //, mut var1: i16, mut var2: i16) {
     let buf_reader = BufReader::new(&mut stream);
-    
     let request_line = buf_reader.lines().next().unwrap().unwrap();
 
     let urll = request_line;

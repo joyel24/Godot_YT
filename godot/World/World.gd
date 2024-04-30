@@ -28,7 +28,9 @@ func _on_request_completed(result, response_code, headers, body): #$HTTPRequest
 	if response_code == 200:
 		temp_string = body.get_string_from_utf8()
 		temp_string.erase(0,15) #remove "<!DOCTYPE html>"
+		temp_string = "[" + temp_string + "]"
 		Global.vote_score = temp_string
+		temp_string = ""
 		#print(Global.vote_score)
 
 func _unhandled_input(_event):
