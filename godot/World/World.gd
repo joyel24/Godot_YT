@@ -3,8 +3,6 @@ extends Node2D
 onready var transition = $UI/Transition
 onready var tilemap = $WorldMap
 
-var float_var
-
 func _ready():
 	Global.text_box = ""
 	calculate_switch_blocks()
