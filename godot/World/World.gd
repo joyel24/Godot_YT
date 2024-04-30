@@ -4,6 +4,7 @@ onready var transition = $UI/Transition
 onready var tilemap = $WorldMap
 
 var requests_ratio = 0
+var temp_string = ""
 
 func _ready():
 	Global.text_box = ""
@@ -25,7 +26,10 @@ func _physics_process(delta): #process every frame
 		
 func _on_request_completed(result, response_code, headers, body): #$HTTPRequest
 	if response_code == 200:
-		print(body.get_string_from_utf8())
+		temp_string = body.get_string_from_utf8()
+		temp_string.erase(0,15) #remove "<!DOCTYPE html>"
+		Global.vote_score = temp_string
+		#print(Global.vote_score)
 
 func _unhandled_input(_event):
 	if Input.is_action_just_pressed("pause"):

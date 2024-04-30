@@ -10,6 +10,7 @@ var walk = 0
 var on_sign_lbl = false
 
 var text_box = ""
+var vote_score = ""
 
 var block_switch = true
 
