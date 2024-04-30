@@ -280,5 +280,7 @@ start_closed = true
 
 [node name="DialogArea" parent="." instance=ExtResource( 12 )]
 
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
 [connection signal="timeout" from="Load" to="." method="_on_Load_timeout"]
 [connection signal="button_down" from="Play" to="." method="_on_Play_button_down"]
