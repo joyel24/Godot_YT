@@ -1,10 +1,10 @@
-chat_id="KicKGFVDUjBvTm5ObU5JX0x6N3ROOW5RVDc0QRILNXNqLTh2Q0pxRU0"
+chat_id="KicKGFVDUjBvTm5ObU5JX0x6N3ROOW5RVDc0QRILQnJLdWhiQXRNU0k"
 API_key="AIzaSyBeo4NGA__U6Xxy-aBE6yFm19pgq8TY-TM"
 client_id="215129129871-79thams74g7jtbdkvucvpqiuq126uiv8.apps.googleusercontent.com"
 client_secret="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"
 redirect_uri="http://127.0.0.1:8080"
 last_message_id_from_0=0
-access_token="ya29.a0Ad52N3-YLAJqxHUd1EDujYl3Vi27v91mpjvvtVEwJDDsouz7XM9L_NoGpVPA60b1tAW6GfKp0Ye0BofynDX1k6xzgfYVCvXCBzGzY8_jGYMSS_hkmgE2nxNULpAG-srzVgoFYwGB3GoPOWFiLx63l9L2qYikTWdDrNqZkjEaCgYKAacSARMSFQHGX2Miw4Ln8_x9-I9a_ck8weiP7Q0174"
+access_token="ya29.a0Ad52N3_lFvTNnmHcqifjhGqp99oZjJ4msrtGrw3QfuZ3duJsf9FjupkBpmIuO6CUvzeVSDZklJcCLgcqPQu7QjrzHEz4etoolcc7l5aTDlCQc_gL6gWVO4gpFE42awdzWwWX1ht23P_sD7Rjw3CmDeFyDClmn7m4_y6t1sMaCgYKAQMSARMSFQHGX2MiSiqxJiCWsCbF1lXqtlwC0g0174"
 
 
 curl -s "https://content-youtube.googleapis.com/youtube/v3/liveChat/messages?liveChatId=$chat_id&part=snippet&key=$API_key" --compressed -H "Authorization: Bearer $access_token" -H 'X-Origin: https://explorer.apis.google.com' > json.txt

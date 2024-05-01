@@ -6,8 +6,9 @@ var requests_ratio = 0
 
 func _ready():
 	transition.open(1.0,0.25)
-	#get_tree().change_scene("res://World/World.tscn") #Run World without menu...
+	get_tree().change_scene("res://World/World.tscn") #DEBUG Run World without menu...
 	$HTTPRequest.connect("request_completed", self, "_on_request_completed")
+	Global.walk = 0
 	
 func _physics_process(delta):
 	requests_ratio += 1

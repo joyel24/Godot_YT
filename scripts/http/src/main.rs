@@ -26,7 +26,7 @@ pub fn main() {
             //var1+=var_increment.0;
             //var2+=var_increment.1;
 
-            println!("{var_increment}");
+            //println!("{var_increment}");
              if var_increment == 1 {
                 var1+=1;
             }
@@ -37,11 +37,11 @@ pub fn main() {
                 var1=0;
                 var2=0;
                 started=200;
-                println!("reset");
+                //println!("reset");
             }
             else if var_increment == 998 {
                 started=299;
-                println!("start");
+                //println!("start");
             }
             else if var_increment == 997 {
                 //started=299;
@@ -68,7 +68,7 @@ pub fn handle_connection(mut stream: TcpStream, mut var1: i32, mut var2: i32, mu
     //let b = b.replace("GET /?state=state_parameter_passthrough_value&code=", "");
     //println!("{:#?}", b);
 
-    println!("{:#?}", b);
+    //println!("{:#?}", b);
 
     if b == "GET /index.html?&!1 HTTP/1.1" {
         var1+=1;
@@ -138,22 +138,22 @@ pub fn handle_connection(mut stream: TcpStream, mut var1: i32, mut var2: i32, mu
     
 
     if b == "GET /index.html?&!1 HTTP/1.1" {
-        return 1;//var1+=1;
+        1//return 1;//var1+=1;
     }
     else if b == "GET /index.html?&!2 HTTP/1.1" {
-        return 2;//var2+=1;
+        1//return 2;//var2+=1;
     }
     else if b == "GET /index.html?&!reset HTTP/1.1" {
-        return 999;
+        999//return 999;
     }
     else if b == "GET /index.html?&!start HTTP/1.1" {
-        return 998;
+        988//return 998;
     }
     else if b == "GET /index.html?&started HTTP/1.1"{
-        return 997;
+        997//return 997;
     }
     else if b == "GET /index.html?&vote_sum HTTP/1.1"{
-        return 996; //UNUSED
+        996//return 996; //UNUSED
     }
     else {0}
 

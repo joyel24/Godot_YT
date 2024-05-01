@@ -50,6 +50,8 @@ var last_state = state
 
 #func _ready():
 #	check_abilities()
+func _ready():
+	Global.gamer1_life = 100
 
 func _process(_delta):
 	get_input()
@@ -365,6 +367,7 @@ func _on_ForceJump_timeout():
 
 func death():
 	Global.restart_game()
+	Global.walk = 0 #stop walking
 
 func teleport(to: Vector2):
 	set_position(to)

@@ -220,7 +220,7 @@ position = Vector2( 248, 68 )
 
 [node name="DialogArea" parent="WorldMap" instance=ExtResource( 12 )]
 position = Vector2( 80.75, 120 )
-text = "A game made by YOUR NAME and Finn Pickart"
+text = "Comment  \"!start\" to play"
 
 [node name="Sign" type="Sprite" parent="WorldMap/DialogArea"]
 position = Vector2( 14.75, 0.25 )
@@ -257,16 +257,17 @@ text = "Play"
 
 [node name="Title" type="Label" parent="."]
 anchor_right = 1.0
-margin_bottom = 128.0
+margin_left = -1.0
+margin_top = 41.0
+margin_right = -1.0
+margin_bottom = 188.0
 rect_pivot_offset = Vector2( 512, 64 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 12 )
-text = "Your Title here"
+text = "Jo's YT Interactive
+Game"
 align = 1
 valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Title"]
 autoplay = "Wobble"

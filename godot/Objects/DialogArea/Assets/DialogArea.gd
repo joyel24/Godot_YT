@@ -3,7 +3,7 @@ extends Area2D
 export(String, MULTILINE) var text = ""
 
 var temp_text: String
-var decreasing_counter = 10
+var decreasing_counter = 25
 var temp_string: String
 var completed_request = false
 
@@ -41,7 +41,7 @@ func _physics_process(delta):
 		Global.vote_score = ""
 		#Global.temp_text = ""
 		if decreasing_counter == 0:
-			decreasing_counter = 10
+			decreasing_counter = 25
 			$HTTPRequest.request("http://127.0.0.1:8080/index.html?&vote_sum")
 			yield(get_tree().create_timer(0.7), "timeout") #sleep
 			#print(Global.vote_sum)
