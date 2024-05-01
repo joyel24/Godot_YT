@@ -10,3 +10,5 @@ scripts/RUST_YT/code.txt
 scripts/RUST_YT/src/code.txt
 scripts/http/json.txt
 scripts/http/src/code.txt
+godot/.import/
+scripts/vars.txt

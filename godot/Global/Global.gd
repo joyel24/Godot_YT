@@ -5,7 +5,17 @@ signal blocks_switched
 var max_coins = 0
 var current_coins = 0
 
+var movement_dir = 0
+var walk = 0
+var gamer1_life = 0
+var enemy1_life = 0
+var on_sign_lbl = false
+var on_enemy_lbl = false
+
 var text_box = ""
+var vote_score = ""
+var vote_sum = 0
+var teleport = false
 
 var block_switch = true
 
@@ -28,5 +38,5 @@ func restart_game():
 	current_coins = 0
 	block_switch = true
 	text_box = ""
-	
-	var _error = get_tree().reload_current_scene()
+	#var _error = get_tree().reload_current_scene() #Restart the current world
+	var _error = get_tree().change_scene("res://UI/Menu.tscn") #Go to menu insreaf of replay world

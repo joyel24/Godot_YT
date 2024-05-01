@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Objects/Trampoline_cloud/Assets/BounceArea.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/Trampoline_cloud/Assets/Trampoline.gd" type="Script" id=3]
+
+[node name="Trampoline" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="BounceArea" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, -4 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[connection signal="on_body_bounced" from="BounceArea" to="." method="_on_BounceArea_on_body_bounced"]

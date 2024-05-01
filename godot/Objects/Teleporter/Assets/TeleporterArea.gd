@@ -27,9 +27,11 @@ func _on_TeleporterArea_body_entered(body):
 	if body.has_method("teleport"):
 		if require_jump:
 			inside = body
-			$JumpPrompt.visible = true
+			$JumpPrompt.visible = false
+			if Global.teleport == true:
+				Global.teleport = false
+				teleport_body(body)
 			return
-		
 		teleport_body(body)
 
 func teleport_body(body):

@@ -28,7 +28,7 @@ var gravity_normal = DEFAULT_GRAVITY
 var gravity_zchanged = false
 var wind_influence = {}
 
-var movement_dir = 0
+#var movement_dir = 0
 var climb_dir = 0
 var inv_mov = 1
 var velocity = Vector2()
@@ -50,10 +50,13 @@ var last_state = state
 
 #func _ready():
 #	check_abilities()
+func _ready():
+	Global.gamer1_life = 100
 
 func _process(_delta):
 	get_input()
 	$Label.text = STATES.keys()[state]# + " -- " + str(rotation_degrees)
+	#print($Label.text)
 
 func _physics_process(delta):
 	last_state = state
@@ -63,7 +66,7 @@ func _physics_process(delta):
 	climb_dir = 0
 	
 	#Speed Smoothing
-	var n_speed = speed * movement_dir
+	var n_speed = speed * Global.movement_dir
 	
 	if is_on_floor():
 		if abs(n_speed) > abs(velocity.x):
@@ -168,7 +171,11 @@ func _physics_process(delta):
 	#velocity = move_and_slide_with_snap(velocity,Vector2(0,snap),Vector2.UP)
 
 func get_input(): 
-	movement_dir = Input.get_vector("left","right","null","null").x
+	Global.movement_dir = Input.get_vector("left","right","null","null").x #left or right key
+	if Global.movement_dir == 0: #if no left or right key pressed 
+		Global.movement_dir = Global.walk #then use Global.walk var cf World.gd
+		
+#	print(Global.movement_dir)
 	
 	if Input.is_action_just_pressed("left") || Input.is_action_just_pressed("right") :
 		# -90 bis 90 normal
@@ -177,7 +184,7 @@ func get_input():
 		else:
 			inv_mov = 1
 	
-	movement_dir *= inv_mov
+	Global.movement_dir *= inv_mov
 	
 	var try_jump = false
 	
@@ -239,16 +246,16 @@ func calculate_sprite():
 	var n_rot = rad2deg(gravity_normal.angle()) - 90
 	rotation_degrees = n_rot
 	
-	if movement_dir < 0:
+	if Global.movement_dir < 0:
 		sprite.flip_h = true
-	elif movement_dir > 0:
+	elif Global.movement_dir > 0:
 		sprite.flip_h = false
 	
 	if state == STATES.Idle:
 		sprite.animation = "idle"
 	elif state == STATES.Walk:
 		sprite.animation = "walk"
-		if movement_dir == 0:
+		if Global.movement_dir == 0:
 			sprite.speed_scale = clamp((abs(velocity.x) / speed)*4,0,1)
 	elif state == STATES.Climb:
 		sprite.animation = "climb"
@@ -360,6 +367,7 @@ func _on_ForceJump_timeout():
 
 func death():
 	Global.restart_game()
+	Global.walk = 0 #stop walking
 
 func teleport(to: Vector2):
 	set_position(to)
