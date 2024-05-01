@@ -1,6 +1,10 @@
-export $(xargs < vars.txt)
+last_message_id_from_0=0
+export $(xargs < ~/XXCODEXX/GODOT/3.5/Godot_YT/scripts/vars.txt)
 
-curl -s "https://content-youtube.googleapis.com/youtube/v3/liveChat/messages?liveChatId=$chat_id&part=snippet&key=$API_key" --compressed -H "Authorization: Bearer $access_token" -H 'X-Origin: https://explorer.apis.google.com' > json.txt
+
+#curl -s "https://content-youtube.googleapis.com/youtube/v3/liveChat/messages?liveChatId=$chat_id&part=snippet&key=$API_key" --compressed -H "Authorization: Bearer $access_token" -H 'X-Origin: https://explorer.apis.google.com' > json.txt
+curl -s "https://content-youtube.googleapis.com/youtube/v3/liveChat/messages?liveChatId=$chat_id&part=snippet" --compressed -H "Authorization: Bearer $access_token" -H 'X-Origin: https://explorer.apis.google.com' > json.txt
+
 total_messages=$(( $(jq -r '.pageInfo.totalResults' json.txt)-1 ))
 
 for ((i = $last_message_id_from_0; i <= $total_messages ; i++)); do

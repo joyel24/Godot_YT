@@ -68,7 +68,7 @@ pub fn handle_connection(mut stream: TcpStream, mut var1: i32, mut var2: i32, mu
     //let b = b.replace("GET /?state=state_parameter_passthrough_value&code=", "");
     //println!("{:#?}", b);
 
-    //println!("{:#?}", b);
+    println!("{:#?}", b);
 
     if b == "GET /index.html?&!1 HTTP/1.1" {
         var1+=1;
