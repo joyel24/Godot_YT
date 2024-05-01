@@ -325,10 +325,6 @@ start_closed = true
 [node name="Trampoline" parent="." instance=ExtResource( 19 )]
 position = Vector2( 584, 152 )
 
-[node name="DialogArea" parent="." instance=ExtResource( 16 )]
-position = Vector2( 637, 296 )
-text = "teleport:\"!2\" continue:\"!1\""
-
 [node name="TeleporterArea" parent="." instance=ExtResource( 6 )]
 position = Vector2( 443, 208 )
 destination = NodePath("../TeleporterArea2")
@@ -338,22 +334,30 @@ position = Vector2( 0, -1 )
 texture = ExtResource( 9 )
 
 [node name="TeleporterArea2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 657, 296 )
+position = Vector2( 661, 253 )
 destination = NodePath("../TeleporterArea")
-
-[node name="TeleporterArea" parent="TeleporterArea2" instance=ExtResource( 6 )]
-position = Vector2( 408, 32 )
-destination = NodePath("../../Objects/TP Cave")
-
-[node name="DialogArea" parent="TeleporterArea2/TeleporterArea" instance=ExtResource( 16 )]
-position = Vector2( -20, 0 )
-
-[node name="Door" type="Sprite" parent="TeleporterArea2"]
-position = Vector2( 408, 32 )
-texture = ExtResource( 9 )
 
 [node name="Door2" type="Sprite" parent="TeleporterArea2"]
 texture = ExtResource( 9 )
+
+[node name="DialogArea" parent="TeleporterArea2" instance=ExtResource( 16 )]
+position = Vector2( -18, 0 )
+text = "teleport:\"!2\" continue:\"!1\""
+
+[node name="DialogArea_enemy" parent="TeleporterArea2" instance=ExtResource( 17 )]
+position = Vector2( 90, 11 )
+
+[node name="DialogArea_enemy2" parent="TeleporterArea2" instance=ExtResource( 17 )]
+position = Vector2( 158, 4 )
+
+[node name="DialogArea_enemy" parent="TeleporterArea2/DialogArea_enemy2" instance=ExtResource( 17 )]
+position = Vector2( 203, 71 )
+
+[node name="DialogArea_enemy2" parent="TeleporterArea2/DialogArea_enemy2" instance=ExtResource( 17 )]
+position = Vector2( 658, 71 )
+
+[node name="DialogArea_enemy3" parent="TeleporterArea2/DialogArea_enemy2" instance=ExtResource( 17 )]
+position = Vector2( 905, 6 )
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
@@ -364,8 +368,7 @@ position = Vector2( 560, 280 )
 position = Vector2( 670, 304 )
 
 [node name="DBG_TP1" parent="." instance=ExtResource( 6 )]
-position = Vector2( 637, 296 )
-require_jump = false
+position = Vector2( 618, 289 )
 destination = NodePath("../DBG_TP2")
 
 [node name="DBG_TP2" parent="." instance=ExtResource( 6 )]
@@ -375,3 +378,18 @@ destination = NodePath("../DBG_TP1")
 [node name="DialogArea_enemy" parent="." instance=ExtResource( 17 )]
 position = Vector2( 2178, 296 )
 text = " Enemy: "
+
+[node name="TeleporterArea3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2246, 296 )
+require_jump = false
+destination = NodePath("../TeleporterArea")
+
+[node name="TeleporterArea4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1214, 293 )
+destination = NodePath("../Objects/TP Cave")
+
+[node name="DialogArea" parent="TeleporterArea4" instance=ExtResource( 16 )]
+position = Vector2( -20, 0 )
+
+[node name="Door" type="Sprite" parent="TeleporterArea4"]
+texture = ExtResource( 9 )
