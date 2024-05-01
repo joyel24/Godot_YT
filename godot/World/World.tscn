@@ -340,25 +340,6 @@ destination = NodePath("../TeleporterArea")
 [node name="Door2" type="Sprite" parent="TeleporterArea2"]
 texture = ExtResource( 9 )
 
-[node name="DialogArea" parent="TeleporterArea2" instance=ExtResource( 16 )]
-position = Vector2( -18, 0 )
-text = "teleport:\"!2\" continue:\"!1\""
-
-[node name="DialogArea_enemy" parent="TeleporterArea2" instance=ExtResource( 17 )]
-position = Vector2( 90, 11 )
-
-[node name="DialogArea_enemy2" parent="TeleporterArea2" instance=ExtResource( 17 )]
-position = Vector2( 158, 4 )
-
-[node name="DialogArea_enemy" parent="TeleporterArea2/DialogArea_enemy2" instance=ExtResource( 17 )]
-position = Vector2( 203, 71 )
-
-[node name="DialogArea_enemy2" parent="TeleporterArea2/DialogArea_enemy2" instance=ExtResource( 17 )]
-position = Vector2( 658, 71 )
-
-[node name="DialogArea_enemy3" parent="TeleporterArea2/DialogArea_enemy2" instance=ExtResource( 17 )]
-position = Vector2( 905, 6 )
-
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
@@ -375,10 +356,6 @@ destination = NodePath("../DBG_TP2")
 position = Vector2( 2010, 286 )
 destination = NodePath("../DBG_TP1")
 
-[node name="DialogArea_enemy" parent="." instance=ExtResource( 17 )]
-position = Vector2( 2178, 296 )
-text = " Enemy: "
-
 [node name="TeleporterArea3" parent="." instance=ExtResource( 6 )]
 position = Vector2( 2246, 296 )
 require_jump = false
@@ -393,3 +370,22 @@ position = Vector2( -20, 0 )
 
 [node name="Door" type="Sprite" parent="TeleporterArea4"]
 texture = ExtResource( 9 )
+
+[node name="DialogArea" parent="." instance=ExtResource( 16 )]
+position = Vector2( 643, 253 )
+text = "teleport:\"!2\" continue:\"!1\""
+
+[node name="Enemies" type="Node2D" parent="."]
+position = Vector2( 544, 189 )
+
+[node name="DialogArea_enemy" parent="Enemies" instance=ExtResource( 17 )]
+position = Vector2( 195, 76 )
+
+[node name="DialogArea_enemy2" parent="Enemies" instance=ExtResource( 17 )]
+position = Vector2( 490, 140 )
+
+[node name="DialogArea_enemy3" parent="Enemies" instance=ExtResource( 17 )]
+position = Vector2( 317, 75 )
+
+[node name="DialogArea_enemy4" parent="Enemies" instance=ExtResource( 17 )]
+position = Vector2( 666, 139 )

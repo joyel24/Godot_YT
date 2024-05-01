@@ -8,18 +8,22 @@ var temp_string: String
 var completed_request = false
 
 var ratio_combat = 0
-
+var enemy1_life = 30
 
 
 func _ready():
 	#if Global.enemy1_life > 0:
 	$Ghost.visible = true
-	Global.enemy1_life = 30
+	#enemy1_life = 30
+	
 #	$HTTPRequest.connect("request_completed", self, "_on_request_completed")
 
 func _on_DialogArea_enemy_body_entered(body):
+#	var test = get_node()
+#	print(test)
 	if body.has_method("is_player"):
-		if Global.enemy1_life > 0:
+		enemy1_life = 30
+		if enemy1_life > 0:
 			Global.on_sign_lbl = true #Tell you're in label (to wait cf world.gd)
 			Global.on_enemy_lbl = true
 			Global.text_box = text
@@ -28,6 +32,7 @@ func _on_DialogArea_enemy_body_entered(body):
 
 func _on_DialogArea_enemy_body_exited(body):
 	if body.has_method("is_player"):
+		enemy1_life = 30
 		Global.on_sign_lbl = false
 		Global.on_enemy_lbl = false
 		#if Global.text_box == text:
@@ -38,19 +43,22 @@ func _on_DialogArea_enemy_body_exited(body):
 func _physics_process(delta):
 	if Global.on_enemy_lbl == true:
 		ratio_combat +=1
-		if ratio_combat >= 29 && Global.gamer1_life > 0 && Global.enemy1_life >0:
+		if ratio_combat >= 29 && Global.gamer1_life > 0 && enemy1_life >0:
 			ratio_combat = 0
 			Global.gamer1_life -=1
-			Global.enemy1_life -=5
+			enemy1_life -=5
 			$HitSound.play(0)
-			if Global.gamer1_life == 0 || Global.enemy1_life == 0:
+			if enemy1_life == 0:
 				$EnemyKilledSound.play(0)
-				$Ghost.visible = false
+				queue_free()
+				#get_tree()
+				#$Ghost.visible = false
 				Global.on_sign_lbl = false
 				Global.on_enemy_lbl = false
+				enemy1_life = 30
 	#	print ("Global.gamer1_life: '" + String(Global.gamer1_life) + "'")
 	#	print ("Global.enemy1_life: '" + String(Global.enemy1_life) + "'")
-		Global.text_box = "Us: " + String(Global.gamer1_life) + temp_text +""+ String(Global.enemy1_life)
+		Global.text_box = "Us: " + String(Global.gamer1_life) + temp_text +""+ String(enemy1_life)
 #	print ("Global.text_box: '" + Global.text_box + "'")
 	
 #	if temp_text != "" && Global.vote_score != "":
