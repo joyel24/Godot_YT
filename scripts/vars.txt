@@ -1,0 +1,6 @@
+chat_id=""
+API_key=""
+client_id=""
+client_secret=""
+redirect_uri=""
+access_token=""
