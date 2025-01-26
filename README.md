@@ -10,3 +10,5 @@ The godot "game" use GET cmd @ specific urls of the minimal rust http to do some
 
 
 The http rust server is used as some kind of minimalist API/interface.
+
+It's WILD: An sd script collect json from YT api, a mini rust http server parse json a do some actions with it, then godot ask to the mini rust api. (A/B score for a vote actually)
